@@ -29,9 +29,9 @@ function getNodeIntersection(intersectionNode: Node, targetNode: Node) {
 	const {
 		width: intersectionNodeWidth,
 		height: intersectionNodeHeight,
-		positionAbsolute: intersectionNodePosition,
+		position: intersectionNodePosition,
 	} = intersectionNode;
-	const targetPosition = targetNode.positionAbsolute;
+	const targetPosition = targetNode.position;
 
 	const w = (intersectionNodeWidth ?? 0) / 2;
 	const h = (intersectionNodeHeight ?? 0) / 2;
@@ -54,7 +54,7 @@ function getNodeIntersection(intersectionNode: Node, targetNode: Node) {
 
 // Get the position (side) where the edge should connect
 function getEdgePosition(node: Node, intersectionPoint: { x: number; y: number }) {
-	const n = { ...node.positionAbsolute, ...node };
+	const n = { ...node.position, ...node };
 	const nx = (n.x ?? 0) + (n.width ?? 0) / 2;
 	const ny = (n.y ?? 0) + (n.height ?? 0) / 2;
 	const px = intersectionPoint.x;
