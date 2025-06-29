@@ -40,6 +40,7 @@ export function Sidebar({ children }: SidebarProps) {
 
 			{/* Sidebar */}
 			<div
+				data-tour='sidebar'
 				className={cn(
 					'fixed inset-y-0 left-0 z-50 w-64 bg-sidebar border-r border-sidebar-border transform transition-transform duration-200 ease-in-out lg:relative lg:translate-x-0',
 					sidebarOpen ? 'translate-x-0' : '-translate-x-full'
@@ -71,6 +72,7 @@ export function Sidebar({ children }: SidebarProps) {
 								<Link
 									key={item.name}
 									href={item.href}
+									data-tour={item.href === '/ai-decision-tree' ? 'ai-decision-tree-nav' : undefined}
 									className={cn(
 										'group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
 										isActive

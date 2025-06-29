@@ -1,6 +1,7 @@
 'use client';
 
 import { DecisionTreeBuilder } from '@/components/decision-tree/DecisionTreeBuilder';
+import { AIInsightPanel } from '@/components/AIInsightPanel';
 import { Bot, Info, Lightbulb } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -8,7 +9,9 @@ export default function AIDecisionTree() {
 	return (
 		<div className='space-y-6 h-full flex flex-col'>
 			{/* Header */}
-			<div className='space-y-2'>
+			<div
+				data-tour='decision-tree-header'
+				className='space-y-2'>
 				<h1 className='text-3xl font-bold tracking-tight flex items-center gap-3'>
 					<Bot className='h-8 w-8 text-primary' />
 					AI Decision Tree Builder
@@ -18,8 +21,13 @@ export default function AIDecisionTree() {
 				</p>
 			</div>
 
+			{/* AI Insights Panel */}
+			<AIInsightPanel />
+
 			{/* Quick Guide */}
-			<Card className='border-blue-200 bg-blue-50/50'>
+			<Card
+				data-tour='quick-guide'
+				className='border-blue-200 bg-blue-50/50'>
 				<CardHeader className='pb-3'>
 					<CardTitle className='text-sm flex items-center gap-2 text-blue-700'>
 						<Lightbulb className='h-4 w-4' />
@@ -45,13 +53,15 @@ export default function AIDecisionTree() {
 			</Card>
 
 			{/* Decision Tree Builder */}
-			<div className='flex-1 min-h-[600px]'>
+			<div
+				data-tour='decision-tree-canvas'
+				className='flex-1 min-h-[600px]'>
 				<DecisionTreeBuilder />
 			</div>
 
 			{/* Feature Information */}
 			<div className='grid gap-4 md:grid-cols-2'>
-				<Card>
+				<Card data-tour='decision-features'>
 					<CardHeader>
 						<CardTitle className='text-sm flex items-center gap-2'>
 							<Info className='h-4 w-4 text-blue-500' />
@@ -76,7 +86,7 @@ export default function AIDecisionTree() {
 					</CardContent>
 				</Card>
 
-				<Card>
+				<Card data-tour='action-features'>
 					<CardHeader>
 						<CardTitle className='text-sm flex items-center gap-2'>
 							<Info className='h-4 w-4 text-green-500' />

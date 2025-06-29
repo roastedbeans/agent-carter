@@ -117,7 +117,9 @@ export default function AbandonedCartDashboard() {
 			</div>
 
 			{/* Cart Metrics */}
-			<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
+			<div
+				data-tour='metrics-grid'
+				className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
 				<Card>
 					<CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
 						<CardTitle className='text-sm font-medium'>Total Abandoned Carts</CardTitle>
@@ -164,7 +166,9 @@ export default function AbandonedCartDashboard() {
 			</div>
 
 			{/* Marketing Metrics */}
-			<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-6'>
+			<div
+				data-tour='marketing-metrics'
+				className='grid gap-4 md:grid-cols-2 lg:grid-cols-6'>
 				<Card>
 					<CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
 						<CardTitle className='text-sm font-medium'>Email Subscribers</CardTitle>
@@ -235,7 +239,7 @@ export default function AbandonedCartDashboard() {
 			</div>
 
 			{/* Abandoned Carts Table */}
-			<Card>
+			<Card data-tour='abandoned-carts-table'>
 				<CardHeader>
 					<CardTitle>Abandoned Carts</CardTitle>
 					<CardDescription>
