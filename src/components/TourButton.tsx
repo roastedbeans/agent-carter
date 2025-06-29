@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { HelpCircle, Play, Sparkles } from 'lucide-react';
+import { Play, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTour } from '@/hooks/useTour';
 import { usePathname } from 'next/navigation';

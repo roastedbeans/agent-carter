@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
 import { DecisionNodeData, PROPERTY_OPTIONS, ACTION_TEMPLATES } from '@/types/decision-tree';
 import { X, Save } from 'lucide-react';
 
